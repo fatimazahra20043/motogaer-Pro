@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGearPro - Blog</title>
+    <style>
+        :root {
+            --primary-color: #0b3911;
+            --secondary-color: #1d3557;
+            --background-color: #f1faee;
+            --text-color: #293241;
+            --border-color: #a8dadc;
+        }
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    
+        @keyframes slideInFromTop {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-image: url('télécharger\ $$7$$.jpeg');
+            background-attachment: fixed;
+            background-size: cover;
+            animation: fadeIn 1s ease-out;
+        }
+    
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    
+        header {
+            background: linear-gradient(to top, black, green);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            animation: slideInFromTop 0.5s ease-out;
+        }
+    
+        h1 {
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+    
+        h1:hover {
+            transform: scale(1.05);
+        }
+    
+        .blog-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            animation: fadeIn 1s ease-out 0.5s both;
+        }
+    
+        .blog-post {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 0.5s ease-out;
+        }
+    
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+    
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+    
+        .blog-post:hover .blog-image {
+            transform: scale(1.05);
+        }
+    
+        .blog-content {
+            padding: 1.5rem;
+        }
+    
+        .blog-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            transition: color 0.3s ease;
+        }
+    
+        .blog-post:hover .blog-title {
+            color: var(--secondary-color);
+        }
+    
+        .blog-excerpt {
+            margin-bottom: 1rem;
+            transition: color 0.3s ease;
+        }
+    
+        .blog-post:hover .blog-excerpt {
+            color: #000;
+        }
+    
+        .blog-meta {
+            font-size: 0.9rem;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            transition: opacity 0.3s ease;
+        }
+    
+        .blog-post:hover .blog-meta {
+            opacity: 0.7;
+        }
+    
+        .read-more {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+    
+        .read-more:hover {
+            background-color: #075115;
+            transform: translateY(-2px);
+        }
+    
+        .full-content {
+            display: none;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+            transition: max-height 0.5s ease, opacity 0.5s ease;
+            max-height: 0;
+            opacity: 0;
+        }
+    
+        .full-content.show {
+            display: block;
+            max-height: 1000px;
+            opacity: 1;
+        }
+    
+        @media (max-width: 768px) {
+            .blog-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    
+        .blog-post:hover .read-more {
+            animation: pulse 1s infinite;
+        }
+    </style>
+        
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Blog MotoGearPro</h1>
+            <p>Découvrez nos derniers articles sur la moto et les équipements</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="blog-container">
+            <article class="blog-post">
+                <img src="télécharger (27).jpg" alt="Les meilleures routes moto au Maroc" class="blog-image">
+                <div class="blog-content">
+                    <h2 class="blog-title">Les meilleures routes moto au Maroc</h2>
+                    <p class="blog-excerpt">Découvrez les itinéraires les plus spectaculaires pour vos balades à moto au Maroc, des montagnes de l'Atlas aux côtes méditerranéennes.</p>
+                    <div class="blog-meta">
+                        <span>Par Ahmed Benali</span>
+                        <span>23 Mai 2022</span>
+                    </div>
+                    <button class="read-more" onclick="toggleContent(this)">Lire la suite</button>
+                    <div class="full-content">
+                        <p>Le Maroc offre une diversité de paysages incroyables pour les amateurs de moto. Voici quelques-unes des meilleures routes à explorer :</p>
+                        <ol>
+                            <li>La route des cascades d'Ouzoud : Un parcours sinueux à travers les montagnes de l'Atlas, offrant des vues spectaculaires sur les cascades.</li>
+                            <li>La côte méditerranéenne : De Tanger à Al Hoceima, profitez de vues imprenables sur la mer et de petits villages côtiers pittoresques.</li>
+                            <li>La route du désert : Partez à l'aventure sur la route de Ouarzazate à Merzouga, en passant par les dunes de l'Erg Chebbi.</li>
+                            <li>Les gorges du Dadès : Surnommée la route des mille kasbahs, cette route offre des paysages spectaculaires et des virages en épingle à cheveux.</li>
+                            <li>Le col du Tichka : La plus haute route du Maroc, reliant Marrakech à Ouarzazate, avec des vues panoramiques à couper le souffle.</li>
+                        </ol>
+                        <p>Avant de partir, assurez-vous d'avoir un équipement adapté et de bien planifier votre itinéraire. Bonne route !</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <img src="Sensibilisation sur le port du casque a moto.jpg" class="blog-image">
+                <div class="blog-content">
+                    <h2 class="blog-title">Comment choisir le bon casque de moto</h2>
+                    <p class="blog-excerpt">Guide complet pour sélectionner le casque de moto parfait en fonction de votre style de conduite, de votre budget et des normes de sécurité.</p>
+                    <div class="blog-meta">
+                        <span>Par Fatima Zahra</span>
+                        <span>2 Juin 2024</span>
+                    </div>
+                    <button class="read-more" onclick="toggleContent(this)">Lire la suite</button>
+                    <div class="full-content">
+                        <p>Choisir le bon casque de moto est crucial pour votre sécurité. Voici les points essentiels à considérer :</p>
+                        <h3>1. Type de casque</h3>
+                        <p>Intégral, modulable, jet ou cross, choisissez en fonction de votre usage principal.</p>
+                        <h3>2. Taille et forme</h3>
+                        <p>Un casque bien ajusté est essentiel. Mesurez votre tour de tête et essayez plusieurs modèles.</p>
+                        <h3>3. Homologation</h3>
+                        <p>Assurez-vous que le casque est homologué selon les normes en vigueur (ECE 22.05 ou 22.06 en Europe).</p>
+                        <h3>4. Matériaux</h3>
+                        <p>Fibre de verre, carbone ou polycarbonate, chaque matériau a ses avantages en termes de poids et de résistance.</p>
+                        <h3>5. Ventilation</h3>
+                        <p>Un bon système de ventilation est important pour le confort, surtout en été.</p>
+                        <h3>6. Visière</h3>
+                        <p>Optez pour une visière anti-rayures et anti-buée. Pensez aux visières teintées pour la conduite en plein soleil.</p>
+                        <p>N'oubliez pas : un casque doit être remplacé tous les 5 ans ou après un impact, même léger.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <img src="Premium Photo _ Motorcycle engine repair.jpg" class="blog-image">
+                <div class="blog-content">
+                    <h2 class="blog-title">Entretien de base de votre moto</h2>
+                    <p class="blog-excerpt">Apprenez les gestes essentiels pour maintenir votre moto en parfait état et prolonger sa durée de vie, des vérifications quotidiennes aux entretiens périodiques.</p>
+                    <div class="blog-meta">
+                        <span>Par Karim Tazi</span>
+                        <span>20 Juin 2023</span>
+                    </div>
+                    <button class="read-more" onclick="toggleContent(this)">Lire la suite</button>
+                    <div class="full-content">
+                        <p>Un bon entretien est essentiel pour garder votre moto en parfait état. Voici quelques conseils de base :</p>
+                        <h3>Vérifications quotidiennes</h3>
+                        <ul>
+                            <li>Pneus : vérifiez la pression et l'état général</li>
+                            <li>Freins : testez leur efficacité</li>
+                            <li>Éclairage : assurez-vous que tous les feux fonctionnent</li>
+                            <li>Niveaux : huile, liquide de refroidissement, liquide de frein</li>
+                        </ul>
+                        <h3>Entretiens périodiques</h3>
+                        <ul>
+                            <li>Changement d'huile et de filtre : tous les 5000 km ou selon les recommandations du constructeur</li>
+                            <li>Chaîne : nettoyage, graissage et tension réguliers</li>
+                            <li>Filtre à air : nettoyage ou remplacement selon l'usage</li>
+                            <li>Bougies : vérification et remplacement si nécessaire</li>
+                        </ul>
+                        <p>N'hésitez pas à consulter le manuel de votre moto pour les spécificités de votre modèle. Un entretien régulier vous permettra de rouler en toute sécurité et d'éviter des réparations coûteuses.</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <script>
+        function toggleContent(button) {
+            const content = button.nextElementSibling;
+            content.classList.toggle('show');
+            button.textContent = content.classList.contains('show') ? 'Réduire' : 'Lire la suite';
+        }
+    </script>
+</body>
+</html>

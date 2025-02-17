@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gants de Moto</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('télécharger\ $$7$$.jpeg');
+      color: #333;
+    }
+    
+    header {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(to top, black, green);
+      color: white;
+      animation: headerFadeIn 1s ease-out;
+    }
+    
+    @keyframes headerFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      transition: color 0.3s ease;
+    }
+    
+    header h1:hover {
+      color: #4CAF50;
+    }
+    
+    header p {
+      font-size: 18px;
+      margin-top: 5px;
+      transition: transform 0.3s ease;
+    }
+    
+    header p:hover {
+      transform: scale(1.05);
+    }
+    
+    .glove-gallery {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+    
+    .glove-card {
+      background-color: white;
+      width: 300px;
+      margin: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: cardAppear 0.5s ease-out;
+    }
+    
+    @keyframes cardAppear {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .glove-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .glove-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .glove-card:hover img {
+      transform: scale(1.05);
+    }
+    
+    .glove-card h2 {
+      margin: 15px 0;
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+    
+    .glove-card:hover h2 {
+      color: #4CAF50;
+    }
+    
+    .glove-card p {
+      padding: 0 20px;
+      font-size: 16px;
+      color: #666;
+      transition: color 0.3s ease;
+    }
+    
+    .glove-card:hover p {
+      color: #333;
+    }
+    
+    .glove-card button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 20px 0;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .glove-card button:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Gants de Moto</h1>
+    <p>Découvrez nos gants de moto résistants et confortables pour votre sécurité.</p>
+  </header>
+
+  <section class="glove-gallery">
+    <div class="glove-card">
+      <img src="Gants de moto cuir - Solar - L (1).jpg" alt="Gant 1">
+      <h2>Gants de Moto Sport</h2>
+      <p>Gants de moto en cuir avec des protections pour les pilotes sportifs.</p>
+      <a href="order.html">
+        <button>Acheter</button>
+      </a>
+    </div>
+
+    <div class="glove-card">
+      <img src="Men's Premium Cruiser Glove - DS44 - XL.jpg" alt="Gant 2">
+      <h2>Gants Cruiser</h2>
+      <p>Gants en textile pour un confort optimal lors de vos balades longues distances.</p>
+      <a href="order.html">
+        <button>Acheter</button>
+      </a>
+    </div>
+
+    <div class="glove-card">
+      <img src="Gants de moto en cuir véritable, rétro, vintage, coupe-vent, respirants, engrenages de protection,.jpg" alt="Gant 3">
+      <h2>Gants Vintage</h2>
+      <p>Gants avec un design rétro pour les motos classiques et un style unique.</p>
+      <a href="order.html">
+        <button>Acheter</button>
+      </a>
+    </div>
+  </section>
+  
+</body>
+</html>

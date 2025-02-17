@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casques de Moto</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('télécharger\ $$7$$.jpeg');
+      color: #333;
+    }
+    
+    header {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(to top, black, green);
+      color: white;
+      animation: headerFadeIn 1s ease-out;
+    }
+    
+    @keyframes headerFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+    
+    header h1:hover {
+      transform: scale(1.05);
+    }
+    
+    header p {
+      font-size: 18px;
+      margin-top: 5px;
+      transition: opacity 0.3s ease;
+    }
+    
+    header:hover p {
+      opacity: 0.8;
+    }
+    
+    .helmet-gallery {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+    
+    .helmet-card {
+      background-color: white;
+      width: 300px;
+      margin: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: cardAppear 0.5s ease-out;
+    }
+    
+    @keyframes cardAppear {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .helmet-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .helmet-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .helmet-card:hover img {
+      transform: scale(1.05);
+    }
+    
+    .helmet-card h2 {
+      margin: 15px 0;
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+    
+    .helmet-card:hover h2 {
+      color: #4CAF50;
+    }
+    
+    .helmet-card p {
+      padding: 0 20px;
+      font-size: 16px;
+      color: #666;
+      transition: color 0.3s ease;
+    }
+    
+    .helmet-card:hover p {
+      color: #333;
+    }
+    
+    .helmet-card button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 20px 0;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .helmet-card button:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Casques de Moto</h1>
+    <p>Découvrez nos casques de moto tendance et sécurisés.</p>
+  </header>
+
+  <section class="helmet-gallery">
+    <div class="helmet-card">
+      <img src="Casque Intégral moto - S442 VENGE R FULLGAZ  Série limités - L.jpg" alt="Casque 1">
+      <h2>Casque Sport</h2>
+      <p>Casque de haute performance pour les pilotes sportifs.</p>
+      <a href="order.html">
+        <button>Acheter</button>
+      </a>   
+     </div>
+
+    <div class="helmet-card">
+      <img src="ILM Casque Moto Cross Homme Femme Homologué ECE-Casque Moto Jet Vintage Rétro Scooter Adulte avec Visiere,Noir Mat,M.jpg" alt="Casque 2">
+      <h2>Casque Cruiser</h2>
+      <p>Casque confortable pour les longues balades en moto.</p>
+      <a href="order.html">
+        <button>Acheter</button>
+      </a>
+    </div>
+
+    <div class="helmet-card">
+      <img src="Casque moto, Homme & Femme, Jet, intégral, modulable, Homologué CE.jpg" alt="Casque 3">
+      <h2>Casque Vintage</h2>
+      <p>Casque au style rétro pour les amateurs de motos classiques.</p>
+      <a href="order.html">
+        <button>Acheter</button>
+      </a>
+    </div>
+  </section>
+  
+</body>
+</html>

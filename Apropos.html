@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - MotoGearPro</title>
+    <style>
+        :root {
+            --primary-color: #0c3505;
+            --secondary-color: #1a1a1a;
+            --background-color: #f5f5f5;
+            --text-color: #333333;
+            --footer-bg: #1a1a1a;
+            --footer-text: #ffffff;
+        }
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family: 'Roboto', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            transition: background-color 0.3s ease;
+        }
+    
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    
+        header {
+            background: linear-gradient(to top, black, green);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            color: white;
+            transition: all 0.3s ease;
+            animation: fadeInDown 0.5s ease-out;
+        }
+    
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: transform 0.3s ease;
+        }
+    
+        .logo:hover {
+            transform: scale(1.05);
+        }
+    
+        .logo span {
+            color: #0c6f2a;
+        }
+    
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+    
+        nav ul li {
+            padding: 0 1rem;
+        }
+    
+        nav ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+        }
+    
+        nav ul li a:hover {
+            color: #052e06;
+            transform: translateY(-2px);
+        }
+    
+        .about-section {
+            margin-top: 100px;
+            background-color: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+            animation: fadeIn 1s ease-out;
+        }
+    
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    
+        .about-section:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+    
+        .about-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+    
+        .about-section p {
+            font-size: 1.2rem;
+            color: #666;
+            line-height: 1.6;
+            transition: color 0.3s ease;
+        }
+    
+        .about-section .mission {
+            margin-top: 30px;
+            transition: transform 0.3s ease;
+        }
+    
+        .about-section .mission:hover {
+            transform: translateY(-5px);
+        }
+    
+        .about-section .mission h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+    
+        .about-section .mission p {
+            font-size: 1.1rem;
+            color: #666;
+            transition: color 0.3s ease;
+        }
+    
+        .footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 4rem 0 2rem;
+            background: linear-gradient(to top, black, green);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.5s ease-out;
+        }
+    
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+    
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+    
+        .footer-section h3 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+    
+        .footer-links {
+            list-style: none;
+        }
+    
+        .footer-links li {
+            margin-bottom: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+    
+        .footer-links li:hover {
+            transform: translateX(5px);
+        }
+    
+        .footer-links a {
+            color: var(--footer-text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+    
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+    
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+    
+        .social-icons a {
+            color: var(--footer-text);
+            font-size: 1.5rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+    
+        .social-icons a:hover {
+            color: var(--primary-color);
+            transform: scale(1.2);
+        }
+    
+        .newsletter-form {
+            display: flex;
+            margin-top: 1rem;
+        }
+    
+        .newsletter-form input {
+            flex-grow: 1;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            transition: box-shadow 0.3s ease;
+        }
+    
+        .newsletter-form input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px var(--primary-color);
+        }
+    
+        .newsletter-form button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+    
+        .newsletter-form button:hover {
+            background-color: #021a04;
+            transform: translateY(-2px);
+        }
+    
+        .footer-bottom {
+            margin-top: 2rem;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            transition: opacity 0.3s ease;
+        }
+    
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+    
+            .newsletter-form {
+                flex-direction: column;
+            }
+    
+            .newsletter-form input,
+            .newsletter-form button {
+                width: 100%;
+                border-radius: 4px;
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Moto<span>Gear</span>Pro</div>
+            <nav>
+                <ul>
+                    <li><a href="acceuil.html">Accueil</a></li>
+                    <li><a href="produits.html">Produits</a></li>
+                    <li><a href="Apropos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about-section container">
+        <h2>À propos de MotoGearPro</h2>
+        <p>
+            MotoGearPro est votre source ultime pour tout ce qui concerne les équipements et accessoires de moto. Nous sommes
+             passionnés par les deux-roues et nous nous efforçons de fournir à nos clients les meilleurs produits et conseils pour améliorer
+              leur expérience de conduite.
+        </p>
+        <p>
+            Fondé en 2021, MotoGearPro a rapidement grandi pour devenir un leader dans l'industrie des équipements de moto. Nous proposons
+             une large gamme de produits de haute qualité, allant des casques et vestes aux gants et bottes, afin que vous soyez toujours bien équipé sur la route.
+        </p>
+        <div class="mission">
+            <h3>Notre Mission</h3>
+            <p>
+                Chez MotoGearPro, notre mission est simple : offrir aux motards les meilleurs produits, services et conseils pour 
+                garantir une expérience de conduite sûre et agréable. Nous croyons que chaque motard mérite le meilleur, et nous nous engageons 
+                à vous fournir les équipements et les accessoires qui répondent à vos besoins et dépassent vos attentes.
+            </p>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Helmets</a></li>
+                        <li><a href="#">Jackets</a></li>
+                        <li><a href="#">Gloves</a></li>
+                        <li><a href="#">Boots</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="helmets.html">Helmets</a></li>
+                    <li><a href="jackets.html">Jackets</a></li>
+                    <li><a href="gloves.html">Gloves</a></li>
+                    <li><a href="boots.html">Boots</a></li>
+                    <li><a href="Accessories.html">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul class="footer-links">
+                    <li><a href="our-story.html">Our Story</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="Careers.html">Careers</a></li>
+                    <li><a href="press.html">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="Shipping-Returns.html">Shipping & Returns</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <h3>Newsletter</h3>
+                    <p>Stay updated with our latest offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MotoGearPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for social icons -->
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>
+

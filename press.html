@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGear Pro - Presse</title>
+    
+    <style>
+        :root {
+            --primary-color: #0b3911;
+            --secondary-color: #1d3557;
+            --background-color: #f1faee;
+            --text-color: #293241;
+            --border-color: #a8dadc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-image: url('télécharger\ \(7\).jpeg');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        header {
+            background: linear-gradient(to top, black, green);
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        header .logo h1 {
+            margin: 0;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .press-hero {
+            color: #fff;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        .press-hero-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .press-hero-content p {
+            font-size: 1.2rem;
+        }
+
+        .press-content {
+            padding: 2rem;
+            text-align: center;
+            background: linear-gradient(to top, black, green);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .press-content h2 {
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .press-releases, .media-resources {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .press-release, .resource {
+            width: 45%;
+            background: #f4f4f4;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .press-release:hover, .resource:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .press-release h3, .resource h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .press-release .date {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn {
+            background: #076b1e;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #054b12;
+        }
+
+        .press-contact {
+            background: linear-gradient(to top, green, black);
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .press-contact h2 {
+            margin-bottom: 1rem;
+        }
+
+        .press-contact p {
+            margin: 0.5rem 0;
+        }
+
+    
+        footer {
+            background: linear-gradient(to top, black, green);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>MotoGear Pro</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="acceuil.html">Accueil</a></li>
+                <li><a href="press.html">Presse</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="press-hero">
+        <div class="press-hero-content">
+            <h2>Espace Presse</h2>
+            <p>Retrouvez ici toutes les ressources pour les médias et journalistes.</p>
+        </div>
+    </section>
+
+    <section class="press-content">
+        <h2>Communiqués de Presse</h2>
+        <div class="press-releases">
+            <div class="press-release">
+                <h3>Lancement de la nouvelle collection 2023</h3>
+                <p class="date">15 Janvier 2025</p>
+                <p>Découvrez notre nouvelle gamme de casques et vestes conçus pour les motards exigeants.</p>
+                <a href="Wash Kits & Bundles.jpg" download class="btn">Télécharger le communiqué</a>
+            </div>
+            <div class="press-release">
+                <h3>MotoGear Pro remporte le prix de l'innovation</h3>
+                <p class="date">30 septembre 2024</p>
+                <p>Nous sommes fiers d'annoncer que notre casque X1 a été récompensé pour son design innovant.</p>
+                <a href="communique-prix-innovation.pdf" download class="btn">Télécharger le communiqué</a>
+            </div>
+        </div>
+
+        <h2>Ressources Médias</h2>
+        <div class="media-resources">
+            <div class="resource">
+                <h3>Logo MotoGear Pro</h3>
+                <p>Téléchargez notre logo en haute résolution pour vos articles.</p>
+                <a href="Логотип Yamaha.jpg" download class="btn">Télécharger le logo</a>
+            </div>
+            <div class="resource">
+                <h3>Images Produits</h3>
+                <p>Accédez à des images haute qualité de nos produits.</p>
+                <a href="Casque Moto Cross Homme, Jeunesse Casques De Moto, Femme Casque De Moto Casques De Cross, Adulte Casque De Motocross Intégral, Casque Cycliste pour Enfants.jpg" download class="btn">Télécharger les images</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="press-contact">
+        <h2>Contact Presse</h2>
+        <p>Pour toute demande média, contactez notre équipe :</p>
+        <p><strong>Email :</strong> press@motogearpro.com</p>
+        <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2023 MotoGear Pro. Tous droits réservés.</p>
+        <p>Contactez-nous: contact@motogearpro.com</p>
+    </footer>
+</body>
+</html>

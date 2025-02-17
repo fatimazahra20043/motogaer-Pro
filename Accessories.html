@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGearPro - Accessoires Moto</title>
+    <style>
+        :root {
+            --primary-color: #0b3911;
+            --secondary-color: #1d3557;
+            --background-color: #f1faee;
+            --text-color: #293241;
+        }
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-image: url('télécharger\ $$7$$.jpeg');
+        }
+    
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    
+        header {
+            background: linear-gradient(to top, black, green);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            animation: fadeIn 1s ease-out;
+        }
+    
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    
+        h1 {
+            margin-bottom: 1rem;
+            animation: slideInFromTop 0.5s ease-out;
+        }
+    
+        @keyframes slideInFromTop {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    
+        .accessories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            animation: fadeIn 1s ease-out 0.5s both;
+        }
+    
+        .accessory-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.5s ease-out;
+        }
+    
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    
+        .accessory-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+    
+        .accessory-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+    
+        .accessory-card:hover .accessory-image {
+            transform: scale(1.05);
+        }
+    
+        .accessory-info {
+            padding: 1rem;
+        }
+    
+        .accessory-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+    
+        .accessory-card:hover .accessory-name {
+            color: var(--primary-color);
+        }
+    
+        .accessory-description {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+    
+        .accessory-price {
+            font-weight: bold;
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+    
+        .accessory-card:hover .accessory-price {
+            transform: scale(1.1);
+        }
+    
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 0.8rem;
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .btn:hover {
+            background-color: #075115;
+            transform: translateY(-2px);
+        }
+    
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            border-radius: 100%;
+            transform: scale(1, 1) translate(-50%);
+            transform-origin: 50% 50%;
+        }
+    
+        @keyframes ripple {
+            0% {
+                transform: scale(0, 0);
+                opacity: 1;
+            }
+            20% {
+                transform: scale(25, 25);
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: scale(40, 40);
+            }
+        }
+    
+        .btn:focus:not(:active)::after {
+            animation: ripple 1s ease-out;
+        }
+    
+        @media (max-width: 768px) {
+            .accessories-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Accessoires Moto</h1>
+            <p>Découvrez notre sélection d'accessoires pour personnaliser et améliorer votre moto</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="accessories-grid">
+            <div class="accessory-card">
+                <img src="RUROC - RIOT HELLFIRE.jpg" alt="Casque de moto" class="accessory-image">
+                <div class="accessory-info">
+                    <h2 class="accessory-name">Casque Intégral Pro</h2>
+                    <p class="accessory-description">Casque haute performance avec une excellente protection et aérodynamisme.</p>
+                    <p class="accessory-price">2990.99 DH</p>
+                    <a href="panier.html"><button class="btn">Ajouter au panier</button></a>
+                </div>
+            </div>
+            <div class="accessory-card">
+                <img src="Gants de moto cuir - Solar - L.jpg" alt="Gants de moto" class="accessory-image">
+                <div class="accessory-info">
+                    <h2 class="accessory-name">Gants Tactiles Pro</h2>
+                    <p class="accessory-description">Gants en cuir avec protection renforcée et compatibilité écran tactile.</p>
+                    <p class="accessory-price">790.99 DH</p>
+
+                    <a href="panier.html"><button class="btn">Ajouter au panier</button></a>
+                </div>
+            </div>
+            <div class="accessory-card">
+                <img src="Product Page.jpg" alt="Blouson de moto" class="accessory-image">
+                <div class="accessory-info">
+                    <h2 class="accessory-name">Blouson Cuir Vintage</h2>
+                    <p class="accessory-description">Blouson en cuir de haute qualité avec un style rétro et des protections modernes.</p>
+                    <p class="accessory-price">3490.99 DH</p>
+                 
+                    <a href="panier.html"><button class="btn">Ajouter au panier</button></a>
+                </div>
+            </div>
+            <div class="accessory-card">
+                <img src="LEXIN Q3 Haut-parleurs Bluetooth Moto, Systèmes Audio Stéréo Moto Imperméables avec USB Chargeur, Enceinte pour Motocycle Chorme.jpg" alt="Intercom moto" class="accessory-image">
+                <div class="accessory-info">
+                    <h2 class="accessory-name">Intercom Bluetooth</h2>
+                    <p class="accessory-description">Système de communication mains libres pour rester connecté pendant vos trajets.</p>
+                    <p class="accessory-price">1990.99 DH</p>
+                
+                    <a href="panier.html"><button class="btn">Ajouter au panier</button></a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

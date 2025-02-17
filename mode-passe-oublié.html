@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGear Pro - Mot de passe oublié</title>
+    <style>
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-image: url('télécharger\ \(7\).jpeg');
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+    
+        header {
+            background: linear-gradient(to top, black, green);
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+    
+        .welcome-message {
+            margin-top: 100px; 
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .welcome-message h2 {
+            color: #0a591f;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .welcome-message p {
+            color: #ffffff;
+            font-size: 1.2rem;
+        }
+
+    
+        .forgot-password-container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .forgot-password-container h2 {
+            color: #0a591f;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .forgot-password-container label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .forgot-password-container input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .forgot-password-container input[type="email"]:focus {
+            border-color: #0a591f;
+            outline: none;
+        }
+
+        .forgot-password-container button {
+            width: 100%;
+            padding: 10px;
+            background: #0a591f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .forgot-password-container button:hover {
+            background: #084017;
+            transform: translateY(-2px);
+        }
+
+        .forgot-password-container .links {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .forgot-password-container .links a {
+            color: #0a591f;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-password-container .links a:hover {
+            color: #084017;
+        }
+
+        .error-message {
+            color: #ff0000;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .success-message {
+            color: #0a591f;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+     
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+ 
+    <header>
+        <h1>MOTOGEARPRO</h1>
+    </header>
+
+  
+    <div class="welcome-message">
+        <h2>Mot de passe oublié</h2>
+        <p>Entrez votre adresse e-mail pour réinitialiser votre mot de passe.</p>
+    </div>
+
+ 
+    <div class="forgot-password-container">
+        <h2>Réinitialisation du mot de passe</h2>
+        <form id="forgotPasswordForm" action="reset-password.php" method="POST">
+            <div class="error-message">
+                <?php
+                if (isset($_GET['error'])) {
+                    echo htmlspecialchars($_GET['error']);
+                }
+                ?>
+            </div>
+            <div class="success-message">
+                <?php
+                if (isset($_GET['success'])) {
+                    echo htmlspecialchars($_GET['success']);
+                }
+                ?>
+            </div>
+
+            <label for="email">Adresse e-mail</label>
+            <input type="email" id="email" name="email" required>
+<a href="gmailpass.html">
+            <button type="submit">Envoyer</button>
+        </a>
+        </form>
+        <div class="links">
+            <a href="gmailpass.html">Retour à la connexion</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGearPro - Carrières</title>
+    <style>
+        :root {
+            --primary-color: #0b3911;
+            --secondary-color: #1d3557;
+            --background-color: #f1faee;
+            --text-color: #293241;
+            --border-color: #a8dadc;
+        }
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    
+        @keyframes slideInFromTop {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-image: url('télécharger\ $$7$$.jpeg');
+            background-attachment: fixed;
+            background-size: cover;
+            animation: fadeIn 1s ease-out;
+        }
+    
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    
+        header {
+            background: linear-gradient(to top, black, green);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            animation: slideInFromTop 0.5s ease-out;
+        }
+    
+        h1, h2, h3 {
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+    
+        h1:hover, h2:hover, h3:hover {
+            transform: scale(1.05);
+        }
+    
+        .careers-content {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out 0.5s both;
+        }
+    
+        .section {
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+    
+        .section:hover {
+            transform: translateY(-5px);
+        }
+    
+        .job-listing {
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: #fff;
+            transition: all 0.3s ease;
+            animation: fadeIn 0.5s ease-out;
+        }
+    
+        .job-listing:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+    
+        .job-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+    
+        .job-listing:hover .job-title {
+            color: var(--secondary-color);
+        }
+    
+        .job-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            transition: opacity 0.3s ease;
+        }
+    
+        .job-listing:hover .job-details {
+            opacity: 0.7;
+        }
+    
+        .job-description {
+            margin-bottom: 1rem;
+            transition: color 0.3s ease;
+        }
+    
+        .job-listing:hover .job-description {
+            color: #000;
+        }
+    
+        .benefits-list, .values-list {
+            list-style-type: none;
+            padding-left: 1rem;
+        }
+    
+        .benefits-list li, .values-list li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+    
+        .benefits-list li:hover, .values-list li:hover {
+            transform: translateX(5px);
+        }
+    
+        .benefits-list li::before, .values-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            transition: color 0.3s ease;
+        }
+    
+        .benefits-list li:hover::before, .values-list li:hover::before {
+            color: var(--secondary-color);
+        }
+    
+        .application-process ol {
+            padding-left: 1.5rem;
+        }
+    
+        .application-process li {
+            margin-bottom: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+    
+        .application-process li:hover {
+            transform: translateX(5px);
+        }
+    
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    
+        .job-listing:hover .job-title {
+            animation: pulse 1s infinite;
+        }
+    
+        @media (max-width: 768px) {
+            .job-details {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Carrières chez MotoGearPro</h1>
+            <p>Rejoignez notre équipe passionnée de moto</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="careers-content">
+            <section class="section">
+                <h2>Pourquoi travailler chez MotoGearPro ?</h2>
+                <p>Chez MotoGearPro, nous sommes passionnés par les motos et nous nous efforçons de fournir les meilleurs équipements et services à nos clients. Nous recherchons des personnes talentueuses et enthousiastes pour rejoindre notre équipe en pleine croissance.</p>
+            </section>
+
+            <section class="section">
+                <h2>Nos valeurs</h2>
+                <ul class="values-list">
+                    <li>Passion pour la moto et la sécurité des motards</li>
+                    <li>Innovation constante dans nos produits et services</li>
+                    <li>Engagement envers la satisfaction client</li>
+                    <li>Travail d'équipe et respect mutuel</li>
+                    <li>Responsabilité environnementale et sociale</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>Avantages</h2>
+                <ul class="benefits-list">
+                    <li>Salaires compétitifs</li>
+                    <li>Assurance maladie et dentaire</li>
+                    <li>Congés payés généreux</li>
+                    <li>Programme de remise sur les produits MotoGearPro</li>
+                    <li>Opportunités de formation et de développement professionnel</li>
+                    <li>Environnement de travail dynamique et convivial</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>Postes ouverts</h2>
+                <div class="job-listing">
+                    <h3 class="job-title">Conseiller de vente - Équipements moto</h3>
+                    <div class="job-details">
+                        <span>Casablanca, Maroc</span>
+                        <span>Temps plein</span>
+                    </div>
+                    <p class="job-description">Nous recherchons un conseiller de vente passionné pour aider nos clients à choisir les meilleurs équipements de moto. Vous devrez avoir une excellente connaissance des produits et une approche axée sur le service client.</p>
+                   
+                </div>
+
+                <div class="job-listing">
+                    <h3 class="job-title">Technicien moto</h3>
+                    <div class="job-details">
+                        <span>Rabat, Maroc</span>
+                        <span>Temps plein</span>
+                    </div>
+                    <p class="job-description">Nous cherchons un technicien moto expérimenté pour rejoindre notre équipe de service. Vous serez responsable de l'entretien, de la réparation et de la personnalisation des motos de nos clients.</p>
+                  
+                </div>
+
+                <div class="job-listing">
+                    <h3 class="job-title">Responsable marketing digital</h3>
+                    <div class="job-details">
+                        <span>Marrakech, Maroc</span>
+                        <span>Temps plein</span>
+                    </div>
+                    <p class="job-description">Nous recherchons un responsable marketing digital créatif pour développer et mettre en œuvre notre stratégie de marketing en ligne. Vous devrez avoir une solide expérience en SEO, médias sociaux et publicité en ligne.</p>
+                    <a href="#" class="apply-btn">Postuler</a>
+                </div>
+            </section>
+
+            <section class="section application-process">
+                <h2>Processus de candidature</h2>
+                <ol>
+                    <li>Envoyez votre CV et une lettre de motivation à careers@motogearpro.com</li>
+                    <li>Si votre profil correspond à nos besoins, nous vous contacterons pour un entretien téléphonique initial</li>
+                    <li>Les candidats retenus seront invités à un entretien en personne dans nos locaux</li>
+                    <li>Pour certains postes, un test pratique ou une présentation peut être demandé</li>
+                    <li>Les candidats sélectionnés recevront une offre d'emploi</li>
+                </ol>
+            </section>
+
+            <section class="section">
+                <h2>Contactez-nous</h2>
+                <p>Si vous avez des questions sur nos opportunités de carrière ou le processus de candidature, n'hésitez pas à nous contacter à careers@motogearpro.com</p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

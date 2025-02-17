@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci</title>
+    <style>
+        body {
+          background-image: url('télécharger (7).jpeg');
+          background-size: cover;
+          background-position: center;
+          animation: fadeIn 2s ease-in-out;
+        }
+      
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      
+        .merci-section {
+          max-width: 600px;
+          margin: 100px auto;
+          text-align: center;
+          padding: 20px;
+          background-color: #f9f9f9;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          animation: slideIn 1.5s ease-out;
+          transform: translateY(0);
+        }
+      
+        @keyframes slideIn {
+          from {
+            transform: translateY(-50px);
+            opacity: 0;
+          }
+          to {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      
+        .merci-section h1 {
+          color: #1a7041;
+          font-size: 24px;
+          margin-bottom: 20px;
+          animation: fadeInText 2s ease-in-out;
+        }
+      
+        @keyframes fadeInText {
+          from {
+            opacity: 0;
+            transform: translateX(-20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      
+        .merci-section p {
+          font-size: 18px;
+          margin-bottom: 20px;
+          color: #555;
+          animation: fadeInText 2.5s ease-in-out;
+        }
+      
+        .btn-retour {
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: #0cb362;
+          color: #fff;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+      
+        .btn-retour:hover {
+          background-color: #0a6943;
+          transform: scale(1.1);
+        }
+      
+        :root {
+          --primary-color: #0c3505;
+          --secondary-color: #1a1a1a;
+          --background-color: #f5f5f5;
+          --text-color: #333333;
+          --footer-bg: #1a1a1a;
+          --footer-text: #ffffff;
+        }
+      
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+      
+        body {
+          font-family: 'Roboto', 'Arial', sans-serif;
+          line-height: 1.6;
+          color: var(--text-color);
+        }
+      
+        .footer {
+          background-color: var(--footer-bg);
+          color: var(--footer-text);
+          padding: 4rem 0 2rem;
+          background: linear-gradient(to top, black, green);
+          animation: fadeIn 3s ease-in-out;
+        }
+      
+        .footer-content {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+      
+        .footer-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 2rem;
+        }
+      
+        .footer-section h3 {
+          color: var(--primary-color);
+          font-size: 1.2rem;
+          margin-bottom: 1rem;
+          text-transform: uppercase;
+          animation: fadeInText 2s ease-in-out;
+        }
+      
+        .footer-links {
+          list-style: none;
+        }
+      
+        .footer-links li {
+          margin-bottom: 0.5rem;
+        }
+      
+        .footer-links a {
+          color: var(--footer-text);
+          text-decoration: none;
+          transition: color 0.3s ease, transform 0.3s ease;
+        }
+      
+        .footer-links a:hover {
+          color: var(--primary-color);
+          transform: translateX(5px);
+        }
+      
+        .social-icons {
+          display: flex;
+          gap: 1rem;
+        }
+      
+        .social-icons a {
+          color: var(--footer-text);
+          font-size: 1.5rem;
+          transition: color 0.3s ease, transform 0.3s ease;
+        }
+      
+        .social-icons a:hover {
+          color: var(--primary-color);
+          transform: scale(1.2);
+        }
+      
+        .newsletter-form {
+          display: flex;
+          margin-top: 1rem;
+        }
+      
+        .newsletter-form input {
+          flex-grow: 1;
+          padding: 0.5rem;
+          border: none;
+          border-radius: 4px 0 0 4px;
+          transition: box-shadow 0.3s ease;
+        }
+      
+        .newsletter-form input:focus {
+          box-shadow: 0 0 5px rgba(12, 53, 5, 0.5);
+        }
+      
+        .newsletter-form button {
+          background-color: var(--primary-color);
+          color: white;
+          border: none;
+          padding: 0.5rem 1rem;
+          border-radius: 0 4px 4px 0;
+          cursor: pointer;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+      
+        .newsletter-form button:hover {
+          background-color: #021a04;
+          transform: scale(1.05);
+        }
+      
+        .footer-bottom {
+          margin-top: 2rem;
+          text-align: center;
+          padding-top: 2rem;
+          border-top: 1px solid #444;
+          animation: fadeIn 3.5s ease-in-out;
+        }
+      
+        @media (max-width: 768px) {
+          .footer-grid {
+            grid-template-columns: 1fr;
+          }
+      
+          .newsletter-form {
+            flex-direction: column;
+          }
+      
+          .newsletter-form input,
+          .newsletter-form button {
+            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+          }
+        }
+      </style>
+</head>
+<body>
+ 
+
+    <main class="merci-section">
+        <h1>Merci pour votre message !</h1>
+        <p>Nous avons bien reçu votre message et nous vous répondrons dans les plus brefs délais.</p>
+        <a href="acceuil.html" class="btn-retour">Retour à l'accueil</a>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul class="footer-links">
+                        <li><a href="helmets.html">Helmets</a></li>
+                        <li><a href="jackets.html">Jackets</a></li>
+                        <li><a href="gloves.html">Gloves</a></li>
+                        <li><a href="boots.html">Boots</a></li>
+                        <li><a href="Accessories.html">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="Careers.html">Careers</a></li>
+                        <li><a href="press.html">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="Shipping-Returns.html">Shipping & Returns</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="size-guide.html">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <h3>Newsletter</h3>
+                    <p>Stay updated with our latest offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MotoGearPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for social icons -->
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

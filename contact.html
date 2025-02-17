@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        :root {
+            --primary-color: #0c3505;
+            --secondary-color: #1a1a1a;
+            --background-color: #f5f5f5;
+            --text-color: #333333;
+            --footer-bg: #1a1a1a;
+            --footer-text: #ffffff;
+        }
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    
+        @keyframes slideInFromTop {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            background-image: url('télécharger\ $$7$$.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            animation: fadeIn 1s ease-out;
+        }
+    
+        header {
+            background: linear-gradient(to top, black, green);
+            padding: 1rem 0;
+            width: 100%;
+            top: 0;
+            animation: slideInFromTop 0.5s ease-out;
+        }
+    
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+            color: #f1f1f1;
+        }
+    
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: transform 0.3s ease;
+        }
+    
+        .logo:hover {
+            transform: scale(1.05);
+        }
+    
+        .logo span {
+            color: #031f0b;
+            transition: color 0.3s ease;
+        }
+    
+        .logo:hover span {
+            color: #0c3505;
+        }
+    
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+    
+        nav ul li {
+            padding: 0 1rem;
+        }
+    
+        nav ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+            color: white;
+            display: inline-block;
+        }
+    
+        nav ul li a:hover {
+            color: #0b2f0e;
+            transform: translateY(-2px);
+        }
+    
+        .contact-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out 0.5s both;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        .contact-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+    
+        .contact-section h1, .contact-section h2 {
+            text-align: center;
+            color: #046a34;
+            transition: color 0.3s ease;
+        }
+    
+        .contact-section:hover h1, .contact-section:hover h2 {
+            color: #0c3505;
+        }
+    
+        .contact-info p {
+            font-size: 16px;
+            margin: 10px 0;
+            transition: transform 0.3s ease;
+        }
+    
+        .contact-info p:hover {
+            transform: translateX(5px);
+        }
+    
+        .contact-info a {
+            color: #046a34;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+    
+        .contact-info a:hover {
+            color: #0c3505;
+            text-decoration: underline;
+        }
+    
+        .contact-form {
+            margin-top: 30px;
+        }
+    
+        .contact-form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+    
+        .contact-form label:hover {
+            color: #046a34;
+        }
+    
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #046a34;
+            box-shadow: 0 0 5px rgba(4, 106, 52, 0.5);
+        }
+    
+        .contact-form button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #046a34;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+    
+        .contact-form button:hover {
+            background-color: #063d1f;
+            transform: translateY(-2px);
+        }
+    
+        .footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 4rem 0 2rem;
+            background: linear-gradient(to top, black, green);
+            animation: fadeIn 1s ease-out;
+        }
+    
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+    
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+    
+        .footer-section h3 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+    
+        .footer-section:hover h3 {
+            color: #fff;
+        }
+    
+        .footer-links {
+            list-style: none;
+        }
+    
+        .footer-links li {
+            margin-bottom: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+    
+        .footer-links li:hover {
+            transform: translateX(5px);
+        }
+    
+        .footer-links a {
+            color: var(--footer-text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+    
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+    
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+    
+        .social-icons a {
+            color: var(--footer-text);
+            font-size: 1.5rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+    
+        .social-icons a:hover {
+            color: var(--primary-color);
+            transform: scale(1.2);
+        }
+    
+        .newsletter-form {
+            display: flex;
+            margin-top: 1rem;
+        }
+    
+        .newsletter-form input {
+            flex-grow: 1;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            transition: box-shadow 0.3s ease;
+        }
+    
+        .newsletter-form input:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(4, 106, 52, 0.5);
+        }
+    
+        .newsletter-form button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+    
+        .newsletter-form button:hover {
+            background-color: #021a04;
+            transform: translateY(-2px);
+        }
+    
+        .footer-bottom {
+            margin-top: 2rem;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            transition: opacity 0.3s ease;
+        }
+    
+        .footer:hover .footer-bottom {
+            opacity: 0.7;
+        }
+    
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+    
+            .newsletter-form {
+                flex-direction: column;
+            }
+    
+            .newsletter-form input,
+            .newsletter-form button {
+                width: 100%;
+                border-radius: 4px;
+                margin-bottom: 0.5rem;
+            }
+        }
+    
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    
+        .contact-form button:hover {
+            animation: pulse 1s infinite;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Moto<span>Gear</span>Pro</div>
+            <nav>
+                <ul>
+                    <li><a href="acceuil.html">Accueil</a></li>
+                    <li><a href="produits.html">Produits</a></li>
+                    <li><a href="Apropos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h1>Contactez-moi</h1>
+            <p>Vous pouvez me contacter via les informations suivantes :</p>
+
+            <div class="contact-info">
+                <p><strong>Nom:</strong> Leila</p>
+                <p><strong>Email:</strong> <a href="mailto:leilatalib@gmail.com">leilatalib@gmail.com</a></p>
+                <p><strong>Téléphone:</strong> 07.09.45.77.95</p>
+                <p><strong>Adresse:</strong> Casablanca, Maroc</p>
+            </div>
+
+            <form class="contact-form" action="merci.html">
+                <h2>Envoyez-moi un message</h2>
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul class="footer-links">
+                        <li><a href="helmets.html">Helmets</a></li>
+                        <li><a href="jackets.html">Jackets</a></li>
+                        <li><a href="gloves.html">Gloves</a></li>
+                        <li><a href="boots.html">Boots</a></li>
+                        <li><a href="Accessories.html">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="Careers.html">Careers</a></li>
+                        <li><a href="press.html">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="Shipping-Returns.html">Shipping & Returns</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="size-guide.html">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <h3>Newsletter</h3>
+                    <p>Stay updated with our latest offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MotoGearPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for social icons -->
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>

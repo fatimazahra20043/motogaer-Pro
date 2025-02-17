@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGearPro - Ajouter au Panier</title>
+    <style>
+        :root {
+            --primary-color: #073e12;
+            --secondary-color: #1de417;
+            --background-color: #f1faee;
+            --text-color: #293241;
+            --border-color: #a8dadc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-image: url('télécharger\ \(7\).jpeg');
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(to top, black, green);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+            .product-card {
+                flex-direction: row;
+            }
+        }
+
+        .product-image {
+            width: 60%;
+            max-width: 400px;
+         
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 2rem;
+            flex: 1;
+        }
+
+        .product-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .product-description {
+            margin-bottom: 1rem;
+        }
+
+        .product-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .quantity-btn {
+            background-color: var(--secondary-color);
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .quantity-btn:hover {
+            background-color: #010f07;
+        }
+
+        .quantity-input {
+            width: 50px;
+            text-align: center;
+            font-size: 1rem;
+            margin: 0 0.5rem;
+            padding: 0.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .add-to-cart-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #05391f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Ajouter au Panier</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="product-card">
+            <img src="Alpinestars Andes V2, bottes Drystar Noir.jpg" alt="Bottes de Moto Pro" class="product-image">
+            <div class="product-info">
+                <h2 class="product-name">Bottes de Moto Pro</h2>
+                <p class="product-description">Ces bottes de moto professionnelles offrent une protection optimale et un confort exceptionnel pour tous vos trajets. Fabriquées avec des matériaux de haute qualité, elles sont résistantes à l'eau et respirantes.</p>
+                <p class="product-price">2990.99 DH</p>
+                <div class="quantity-selector">
+                    <button class="quantity-btn" onclick="decrementQuantity()">-</button>
+                    <input type="number" id="quantity" class="quantity-input" value="1" min="1" max="10">
+                    <button class="quantity-btn" onclick="incrementQuantity()">+</button>
+                </div>
+                <a href="order.html" class="add-to-cart-btn" onclick="addToCart()">Confirmer la demande</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function decrementQuantity() {
+            let quantityInput = document.getElementById('quantity');
+            if (quantityInput.value > 1) {
+                quantityInput.value = parseInt(quantityInput.value) - 1;
+            }
+        }
+
+        function incrementQuantity() {
+            let quantityInput = document.getElementById('quantity');
+            if (quantityInput.value < 10) {
+                quantityInput.value = parseInt(quantityInput.value) + 1;
+            }
+        }
+
+        function addToCart() {
+            let quantity = document.getElementById('quantity').value;
+            alert(`${quantity} Bottes de Moto Pro ajoutées au panier!`);
+            
+        }
+    </script>
+</body>
+</html>

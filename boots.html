@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGearPro - Bottes de Moto</title>
+    <style>
+        :root {
+            --primary-color: #0b3911;
+            --secondary-color: #1d3557;
+            --background-color: #f1faee;
+            --text-color: #293241;
+        }
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    
+        @keyframes slideInFromTop {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-image: url('télécharger\ $$7$$.jpeg');
+            animation: fadeIn 1s ease-out;
+        }
+    
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    
+        header {
+            background: linear-gradient(to top, black, green);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            animation: slideInFromTop 0.5s ease-out;
+        }
+    
+        h1 {
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+    
+        h1:hover {
+            transform: scale(1.05);
+        }
+    
+        .boots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            animation: fadeIn 1s ease-out 0.5s both;
+        }
+    
+        .boot-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 0.5s ease-out;
+        }
+    
+        .boot-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+    
+        .boot-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+    
+        .boot-card:hover .boot-image {
+            transform: scale(1.05);
+        }
+    
+        .boot-info {
+            padding: 1rem;
+            transition: background-color 0.3s ease;
+        }
+    
+        .boot-card:hover .boot-info {
+            background-color: #f8f8f8;
+        }
+    
+        .boot-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+    
+        .boot-card:hover .boot-name {
+            color: var(--primary-color);
+        }
+    
+        .boot-description {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+            transition: color 0.3s ease;
+        }
+    
+        .boot-card:hover .boot-description {
+            color: #333;
+        }
+    
+        .boot-price {
+            font-weight: bold;
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+    
+        .boot-card:hover .boot-price {
+            transform: scale(1.1);
+        }
+    
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 0.8rem;
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .btn:hover {
+            background-color: #075115;
+            transform: translateY(-2px);
+        }
+    
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            border-radius: 100%;
+            transform: scale(1, 1) translate(-50%);
+            transform-origin: 50% 50%;
+        }
+    
+        @keyframes ripple {
+            0% {
+                transform: scale(0, 0);
+                opacity: 1;
+            }
+            20% {
+                transform: scale(25, 25);
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: scale(40, 40);
+            }
+        }
+    
+        .btn:focus:not(:active)::after {
+            animation: ripple 1s ease-out;
+        }
+    
+        @media (max-width: 768px) {
+            .boots-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    
+        .boot-card:hover .btn {
+            animation: pulse 1s infinite;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Bottes de Moto</h1>
+            <p>Découvrez notre sélection de bottes pour tous les styles de conduite</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="boots-grid">
+            <div class="boot-card">
+                <img src="Sidi Rex Motorcycle Motorbike Boots - Black_black (2024) (ce).jpg" alt="Bottes de course" class="boot-image">
+                <div class="boot-info">
+                    <h2 class="boot-name">Bottes de Course Pro</h2>
+                    <p class="boot-description">Bottes haute performance pour la course et la conduite sportive.</p>
+                    <p class="boot-price">2990.99 DH</p>
+                    <a href="ajouter-au-panier.html">
+                        <button class="btn">Ajouter au panier</button>
+                    </a>
+                </div>
+            </div>
+            <div class="boot-card">
+                <img src="Alpinestars Andes V2, bottes Drystar Noir.jpg" alt="Bottes de tourisme" class="boot-image">
+                <div class="boot-info">
+                    <h2 class="boot-name">Bottes de Tourisme Confort</h2>
+                    <p class="boot-description">Conçues pour le confort lors des longs trajets.</p>
+                    <p class="boot-price">2490.99 DH</p>
+                    <a href="ajouter-au-panier.html">
+                        <button class="btn">Ajouter au panier</button>
+                    </a>
+                </div>
+            </div>
+            <div class="boot-card">
+                <img src="télécharger (26).jpg" alt="Bottes tout-terrain" class="boot-image">
+                <div class="boot-info">
+                    <h2 class="boot-name">Bottes Tout-Terrain Extrême</h2>
+                    <p class="boot-description">Robustes et durables pour les aventures hors route.</p>
+                    <p class="boot-price">1990.99 DH</p>
+                    <a href="ajouter-au-panier.html">
+                        <button class="btn">Ajouter au panier</button>
+                    </a>
+                </div>
+            </div>
+            <div class="boot-card">
+                <img src="Chaussures moto Forma Legacy WP marron- 43.jpg" alt="Chaussures urbaines" class="boot-image">
+                <div class="boot-info">
+                    <h2 class="boot-name">Chaussures Urbaines Moto</h2>
+                    <p class="boot-description">Style décontracté avec protection pour la conduite en ville.</p>
+                    <p class="boot-price">1490.99 DH</p>
+                    <a href="ajouter-au-panier.html">
+                    <button class="btn">Ajouter au panier</button>
+                </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

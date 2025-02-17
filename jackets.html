@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vestes de Moto</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('télécharger\ $$7$$.jpeg');
+      color: #333;
+      animation: fadeIn 1s ease-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    header {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(to top, black, green);
+      color: white;
+      animation: slideDown 0.5s ease-out;
+    }
+    
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+    
+    header h1:hover {
+      transform: scale(1.05);
+    }
+    
+    header p {
+      font-size: 18px;
+      margin-top: 5px;
+      transition: opacity 0.3s ease;
+    }
+    
+    header:hover p {
+      opacity: 0.8;
+    }
+    
+    /* Gallery section */
+    .jacket-gallery {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+    
+    .jacket-card {
+      background-color: white;
+      width: 300px;
+      margin: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: cardAppear 0.5s ease-out;
+    }
+    
+    @keyframes cardAppear {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .jacket-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .jacket-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .jacket-card:hover img {
+      transform: scale(1.05);
+    }
+    
+    .jacket-card h2 {
+      margin: 15px 0;
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+    
+    .jacket-card:hover h2 {
+      color: #4CAF50;
+    }
+    
+    .jacket-card p {
+      padding: 0 20px;
+      font-size: 16px;
+      color: #666;
+      transition: color 0.3s ease;
+    }
+    
+    .jacket-card:hover p {
+      color: #333;
+    }
+    
+    .jacket-card button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 20px 0;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .jacket-card button:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Vestes de Moto</h1>
+    <p>Découvrez nos vestes de moto tendances et confortables pour chaque style.</p>
+  </header>
+
+  <section class="jacket-gallery">
+    <div class="jacket-card">
+      <img src="Corelli MG Suzuki Black Motorcycle Racing Leather Jacket (L(EU52-54)).jpg" alt="Veste 1">
+      <h2>Veste en Cuir Sport</h2>
+      <p>Une veste en cuir pour un style sportif et une protection optimale.</p>
+      <a href="order.html">
+        <button>Acheter</button>
+      </a>
+    </div>
+
+    <div class="jacket-card">
+      <img src="Hyper-flo Women's Medium Air Jacket 8916010275.jpg" alt="Veste 2">
+      <h2>Veste Cruiser</h2>
+      <p>Veste robuste et confortable pour les longues randonnées en moto.</p>
+      <a href="order.html">
+        <button>Acheter</button>
+      </a>
+    </div>
+
+    <div class="jacket-card">
+      <img src="Custom Size Green and Black Leather Motorcycle Jacket _ Stylish Riding Jacket _ Premium Protective Gear _ Durable Biker Jacket for Bikers.jpg" alt="Veste 3">
+      <h2>Veste Vintage</h2>
+      <p>Une veste au style rétro pour les amateurs de motos classiques.</p>
+      <a href="order.html">
+        <button>Acheter</button>
+      </a>
+    </div>
+  </section>
+  
+</body>
+</html>
